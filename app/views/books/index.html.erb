@@ -1,0 +1,9 @@
+<h1>Books</h1>
+<% @books.each do |book| %>
+  <h4><%= book.title %></h4>
+  <h4><%= book.published %></h4>
+  <h4><%= book.genre %></h4>
+  <h4><%= book.id %></h4>
+  <%= link_to 'Show', book_path(book) %>
+  <%= link_to 'Delete', book, method: :delete %>
+<% end %>
